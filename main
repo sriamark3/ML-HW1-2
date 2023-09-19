@@ -1,0 +1,14 @@
+import numpy as np
+from scipy.spatial import distance
+import random
+
+data = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+corr = np.corrcoef(data[0], data[1])[0, 1]
+cos_sim = 1 - distance.cosine(data[0], data[1])
+eu_dist = distance.euclidean(data[0], data[1])
+
+print(f"Correlation: {corr}")
+print(f"Cosine Similarity: {cos_sim}")
+print(f"Euclidean Distance: {eu_dist}")
+
